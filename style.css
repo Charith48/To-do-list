@@ -1,0 +1,151 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    width:100%;
+    height:100vh;
+    box-sizing:border-box;
+    background-image:linear-gradient(to bottom right,#00c0FF, #421888);
+    /* background-image:linear-gradient(to bottom right,#FF512F, #DD2476); */
+    /* background-image:linear-gradient(to bottom right,#FF61D2, #FE9090); */
+    /* background-image:linear-gradient(to bottom right,#72FFB6, #10D164); */
+    /* background-image:linear-gradient(to bottom right,#FD8451, #FFBD6F); */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    margin:30px 0;
+    width:100%;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container>div:first-child{
+    border:none;
+    background-color: #3d1976;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#main-box{
+    border:none;
+
+}
+.box{
+     border-radius: 15px;
+    color:white;
+    display:flex;
+    gap:5px;
+    flex-direction: column;
+    border: 2px solid white;
+    width:40%;
+    height:auto;
+    padding:8px 8px;
+    flex-wrap: wrap;
+   
+}
+
+input{
+    width: 390px;
+    height:40px;
+    padding:3px;
+    font-size: 100%;
+    border:1px solid white;
+ 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 5px;
+}
+button{
+    margin-left: 5px;
+    margin-bottom: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    width:50px;
+    height:46px;
+    font-size: 80%;
+    border-radius: 5px;
+}
+button:hover{
+    color:black;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.task{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    flex-grow: 2;
+    /* border-left:1px solid white;
+    border-right:1px solid  white;
+    border-bottom:1px solid  white; */
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    padding:10px;
+    color:black;
+    background-color:white;
+}
+.cs{
+    width:0.8rem;
+    height:0.8rem;
+}
+.line{
+    display: flex;
+    align-items: center;
+    gap:8px;
+    position:relative ;
+}
+#values{
+    position: absolute;
+    right:0;
+    border:1px solid white;
+    font-size: 80%;
+    font-weight: 100;
+}
+p{
+    font-size: 110%;
+    font-weight: 200;
+}
+#icon{
+    padding:0 8px;
+    font-size: 90%;
+}
+input[type=checkbox]:checked + p {
+    text-decoration: line-through;
+    color:red;
+}
+
+/*bringing all together*/
+.form-info {
+    /* This bit sets up the horizontal layout */
+    display:flex;
+    flex-direction:row;
+    gap:4px;
+    
+    /* This bit draws the box around it */
+    border:none;
+  
+    /* I've used padding so you can see the edges of the elements. */
+    padding:2px;
+  }
+  
+    form> input {
+    /* Tell the input to use all the available space */
+    flex-grow:2;
+    /* And hide the input's outline, so the form looks like the outline */
+    border:none;
+  }
+  
+  form>input:focus {
+    /* removing the input focus blue box. Put this on the form if you like. */
+    outline: none;
+  }
+  
+  form>button {
+    /* Just a little styling to make it pretty */
+    border:none;
+    font-size: 200;
+    color: white;
+    background-image:linear-gradient(to bottom right,#72FFB6, #10D164);
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Lato:wght@100;300&family=My+Soul&family=Poppins:wght@200&family=Shadows+Into+Light&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e873cfcfc1.js" crossorigin="anonymous"></script>
+    <title>To-do List</title>
+</head>
+<body>
+    <div class="container">
+    <div class="box">
+        <h1><i class="fa-solid fa-list-check" id="icon"></i>To-do list</h1>
+    </div>
+    <div class="box" id="main-box">
+        <div class="form-info">
+        <form action="/" method="post">
+            <input type="text" name="tskadder" placeholder="Enter your task here">
+            <button type="submit"><i class="fa-solid fa-plus" id="icon2"></i></button>
+        </form>
+        </div>
+        <div class="task">
+        <%ejes.forEach(function(items){%>
+        <form action="/delete" method="post">
+            <div class="line">
+            <input type="checkbox" name="checkbox1" class="cs"  value="<%=items._id%>" onchange="this.form.submit()">
+            <p for="check-box" class="para"><%=items.name%></p>
+            <select id="values" name="values">
+                <option value="less">3</option>
+                <option value="medium">2</option>
+                <option value="high">1</option>
+              </select>
+            </div>
+        </form>
+        <%})%>
+        </div>
+    </div>
+</div>
+</body>
+</html>
